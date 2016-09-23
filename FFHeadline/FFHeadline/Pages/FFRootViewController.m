@@ -8,6 +8,7 @@
 
 #import "FFRootViewController.h"
 #import "FFHeadlineCell.h"
+#import "FFHeadlineListViewController.h"
 
 @interface FFRootViewController ()
 
@@ -27,7 +28,9 @@
                       @"9",@"10",
                       @"11",@"12",
                       @"13",@"14",
-                      @"15",@"16"];
+                      @"15",@"16",
+                      @"17",@"18",
+                      @"19",@"20"];
 }
 
 #pragma - mark UITableViewDataSource
@@ -53,6 +56,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return kFFHeadlineCell_Height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FFHeadlineListViewController *vc=[[FFHeadlineListViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -11,7 +11,7 @@
 #import "Masonry.h"
 #import "UIView+WBJobExtension.h"
 
-#define kGap 60
+#define kGap 15
 
 @interface FFHeadlineCell ()<UIScrollViewDelegate>
 
@@ -32,24 +32,22 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.layer.masksToBounds=YES;
-        self.backgroundColor=[UIColor whiteColor];
         
         _icon=[[UIImageView alloc]init];
         _icon.backgroundColor=[UIColor orangeColor];
         [self addSubview:_icon];
         [_icon mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(35, 35));
-            make.left.equalTo(@(15));
+            make.left.equalTo(@(kGap));
             make.centerY.equalTo(self);
         }];
         
+        double x=kGap+35;
         _curView=[[FFHeadlineView alloc]init];
-        _curView.frame=CGRectMake(kGap, 0, kMainScreen_Width-45, kFFHeadlineCell_Height);
-        _curView.backgroundColor=[UIColor yellowColor];
+        _curView.frame=CGRectMake(x, 0, kMainScreen_Width-x, kFFHeadlineCell_Height);
         [self addSubview:_curView];
         _nextView=[[FFHeadlineView alloc]init];
-        _nextView.frame=CGRectMake(kGap, kFFHeadlineCell_Height, kMainScreen_Width-45, kFFHeadlineCell_Height);
-        _nextView.backgroundColor=[UIColor yellowColor];
+        _nextView.frame=CGRectMake(x, kFFHeadlineCell_Height, kMainScreen_Width-x, kFFHeadlineCell_Height);
         [self addSubview:_nextView];
     }
     return self;

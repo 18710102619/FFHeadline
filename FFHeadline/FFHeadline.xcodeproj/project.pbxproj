@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		367FCB901D94F85200D4411D /* UIView+WBJobExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCB8F1D94F85200D4411D /* UIView+WBJobExtension.m */; };
+		367FCB9A1D95155700D4411D /* FFNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCB991D95155700D4411D /* FFNoImageCell.m */; };
+		367FCB9D1D95156E00D4411D /* FFOneImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCB9C1D95156E00D4411D /* FFOneImageCell.m */; };
+		367FCBA31D9516E400D4411D /* FFHeadlineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCBA21D9516E400D4411D /* FFHeadlineListViewController.m */; };
+		367FCBA81D951AAF00D4411D /* FFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCBA61D951AAF00D4411D /* FFNetwork.m */; };
+		367FCBAC1D95378A00D4411D /* FFHeadlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FCBAB1D95378A00D4411D /* FFHeadlineModel.m */; };
+		3683D38F1D954FA800F8DE68 /* FFThreeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3683D38E1D954FA800F8DE68 /* FFThreeImageCell.m */; };
 		36B82BA31D8FE027002EBB72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B82BA21D8FE027002EBB72 /* main.m */; };
 		36B82BA61D8FE027002EBB72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B82BA51D8FE027002EBB72 /* AppDelegate.m */; };
 		36B82BAE1D8FE027002EBB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36B82BAD1D8FE027002EBB72 /* Assets.xcassets */; };
@@ -40,6 +46,18 @@
 		1B06FC2035708F1F4A24BDE8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		367FCB8E1D94F85200D4411D /* UIView+WBJobExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WBJobExtension.h"; sourceTree = "<group>"; };
 		367FCB8F1D94F85200D4411D /* UIView+WBJobExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WBJobExtension.m"; sourceTree = "<group>"; };
+		367FCB981D95155700D4411D /* FFNoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNoImageCell.h; sourceTree = "<group>"; };
+		367FCB991D95155700D4411D /* FFNoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNoImageCell.m; sourceTree = "<group>"; };
+		367FCB9B1D95156E00D4411D /* FFOneImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOneImageCell.h; sourceTree = "<group>"; };
+		367FCB9C1D95156E00D4411D /* FFOneImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOneImageCell.m; sourceTree = "<group>"; };
+		367FCBA11D9516E400D4411D /* FFHeadlineListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineListViewController.h; sourceTree = "<group>"; };
+		367FCBA21D9516E400D4411D /* FFHeadlineListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeadlineListViewController.m; sourceTree = "<group>"; };
+		367FCBA51D951AAF00D4411D /* FFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNetwork.h; sourceTree = "<group>"; };
+		367FCBA61D951AAF00D4411D /* FFNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNetwork.m; sourceTree = "<group>"; };
+		367FCBAA1D95378A00D4411D /* FFHeadlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineModel.h; sourceTree = "<group>"; };
+		367FCBAB1D95378A00D4411D /* FFHeadlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeadlineModel.m; sourceTree = "<group>"; };
+		3683D38D1D954FA800F8DE68 /* FFThreeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFThreeImageCell.h; sourceTree = "<group>"; };
+		3683D38E1D954FA800F8DE68 /* FFThreeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFThreeImageCell.m; sourceTree = "<group>"; };
 		36B82B9E1D8FE027002EBB72 /* FFHeadline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFHeadline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B82BA21D8FE027002EBB72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36B82BA41D8FE027002EBB72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +115,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		367FCB971D9514FD00D4411D /* FFHeadlineListView */ = {
+			isa = PBXGroup;
+			children = (
+				367FCB981D95155700D4411D /* FFNoImageCell.h */,
+				367FCB991D95155700D4411D /* FFNoImageCell.m */,
+				367FCB9B1D95156E00D4411D /* FFOneImageCell.h */,
+				367FCB9C1D95156E00D4411D /* FFOneImageCell.m */,
+				3683D38D1D954FA800F8DE68 /* FFThreeImageCell.h */,
+				3683D38E1D954FA800F8DE68 /* FFThreeImageCell.m */,
+			);
+			path = FFHeadlineListView;
+			sourceTree = "<group>";
+		};
+		367FCBA41D951AAF00D4411D /* NET */ = {
+			isa = PBXGroup;
+			children = (
+				367FCBA51D951AAF00D4411D /* FFNetwork.h */,
+				367FCBA61D951AAF00D4411D /* FFNetwork.m */,
+			);
+			path = NET;
+			sourceTree = "<group>";
+		};
 		36B82B951D8FE027002EBB72 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +162,7 @@
 		36B82BA01D8FE027002EBB72 /* FFHeadline */ = {
 			isa = PBXGroup;
 			children = (
+				367FCBA41D951AAF00D4411D /* NET */,
 				36B82BD41D8FE129002EBB72 /* Pages */,
 				36B82BA41D8FE027002EBB72 /* AppDelegate.h */,
 				36B82BA51D8FE027002EBB72 /* AppDelegate.m */,
@@ -163,9 +204,14 @@
 			children = (
 				367FCB8E1D94F85200D4411D /* UIView+WBJobExtension.h */,
 				367FCB8F1D94F85200D4411D /* UIView+WBJobExtension.m */,
+				367FCB971D9514FD00D4411D /* FFHeadlineListView */,
 				36B82BD51D8FE129002EBB72 /* FFHeadlineView */,
 				36F3ACAB1D94D7600096F760 /* FFRootViewController.h */,
 				36F3ACAC1D94D7600096F760 /* FFRootViewController.m */,
+				367FCBA11D9516E400D4411D /* FFHeadlineListViewController.h */,
+				367FCBA21D9516E400D4411D /* FFHeadlineListViewController.m */,
+				367FCBAA1D95378A00D4411D /* FFHeadlineModel.h */,
+				367FCBAB1D95378A00D4411D /* FFHeadlineModel.m */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -355,12 +401,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3683D38F1D954FA800F8DE68 /* FFThreeImageCell.m in Sources */,
 				36F3ACB01D94DA0C0096F760 /* FFHeadlineView.m in Sources */,
+				367FCB9A1D95155700D4411D /* FFNoImageCell.m in Sources */,
 				36B82BD81D8FE195002EBB72 /* FFHeadlineCell.m in Sources */,
+				367FCBAC1D95378A00D4411D /* FFHeadlineModel.m in Sources */,
 				36F3ACAD1D94D7600096F760 /* FFRootViewController.m in Sources */,
 				36B82BA61D8FE027002EBB72 /* AppDelegate.m in Sources */,
+				367FCB9D1D95156E00D4411D /* FFOneImageCell.m in Sources */,
 				36B82BA31D8FE027002EBB72 /* main.m in Sources */,
 				367FCB901D94F85200D4411D /* UIView+WBJobExtension.m in Sources */,
+				367FCBA31D9516E400D4411D /* FFHeadlineListViewController.m in Sources */,
+				367FCBA81D951AAF00D4411D /* FFNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FFHeadline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zly.FFHeadline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,6 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FFHeadline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zly.FFHeadline;
 				PRODUCT_NAME = "$(TARGET_NAME)";

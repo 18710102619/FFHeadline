@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "UIView+WBJobExtension.h"
 
-#define kGap 7
+#define kGap 15
 
 @implementation FFHeadlineView
 
@@ -18,22 +18,23 @@
 {
     self = [super init];
     if (self) {
-        
         self.title=[[UILabel alloc]init];
-        self.title.backgroundColor=[UIColor magentaColor];
+        self.title.backgroundColor=[UIColor orangeColor];
         [self addSubview:self.title];
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.equalTo(@(kGap));
-            make.right.equalTo(@(-kGap));
+            make.left.equalTo(@(15));
+            make.right.equalTo(@(-15));
+            make.top.equalTo(@(7));
             make.height.equalTo(@(15));
         }];
         
         self.subtitle=[[UILabel alloc]init];
-        self.subtitle.backgroundColor=[UIColor magentaColor];
+        self.subtitle.backgroundColor=[UIColor orangeColor];
         [self addSubview:self.subtitle];
         [self.subtitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@(kGap));
-            make.right.bottom.equalTo(@(-kGap));
+            make.left.equalTo(@(15));
+            make.right.equalTo(@(-15));
+            make.bottom.equalTo(@(-7));
             make.height.equalTo(@(15));
         }];
     }
