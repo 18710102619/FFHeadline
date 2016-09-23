@@ -1,0 +1,15 @@
+PODS:
+  - JSPatch (1.1):
+    - JSPatch/Core
+  - JSPatch/Core (1.1)
+  - Masonry (1.0.2)
+
+DEPENDENCIES:
+  - JSPatch
+  - Masonry
+
+SPEC CHECKSUMS:
+  JSPatch: ade285ad1d8f06146ed6054a39cef87509453299
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+COCOAPODS: 0.34.4
