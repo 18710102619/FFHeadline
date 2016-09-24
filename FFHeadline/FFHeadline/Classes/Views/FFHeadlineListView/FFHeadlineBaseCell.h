@@ -1,5 +1,5 @@
 //
-//  FFBaseImageCell.h
+//  FFHeadlineBaseCell.h
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/24.
@@ -11,14 +11,20 @@
 #import "UIView+WBJobExtension.h"
 #import "UIColor+Hex.h"
 #import "Masonry.h"
+#import "FFHeadlineHighlightView.h"
 
 #define kTop 30
 #define kGap 15
+#define kBottom 20
 #define kLineSpacing 6
 
-@interface FFBaseImageCell : UITableViewCell
+@interface FFHeadlineBaseCell : UITableViewCell
 
 @property(nonatomic,strong)UILabel *title;
+@property(nonatomic,strong)UIImageView *baodian;
+@property(nonatomic,strong)FFHeadlineHighlightView *highlight;
+
+@property(nonatomic,assign)double cellHeight;
 
 - (void)setTitleAttributedText:(NSString *)title;
 

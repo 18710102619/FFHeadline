@@ -22,7 +22,7 @@
 /// 查看量
 @property(nonatomic,assign)int seeCount;
 /// 点赞量
-@property(nonatomic,assign)int hitCount;
+@property(nonatomic,assign)int zanCount;
 
 + (id)modelWithDic:(NSDictionary *)dic;
 

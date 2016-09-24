@@ -1,14 +1,14 @@
 //
-//  FFNoImageCell.m
+//  FFHeadlineNoImageCell.m
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/23.
 //  Copyright © 2016年 bj.zly.com. All rights reserved.
 //
 
-#import "FFNoImageCell.h"
+#import "FFHeadlineNoImageCell.h"
 
-@implementation FFNoImageCell
+@implementation FFHeadlineNoImageCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

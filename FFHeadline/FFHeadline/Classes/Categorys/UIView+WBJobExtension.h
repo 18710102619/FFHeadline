@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define kMainScreen_Width [[UIScreen mainScreen] bounds].size.width
+#define kMainScreen_Height [[UIScreen mainScreen] bounds].size.height
 
 @interface UIView (WBJobExtension)
 

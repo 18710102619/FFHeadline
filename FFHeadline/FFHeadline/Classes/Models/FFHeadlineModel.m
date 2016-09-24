@@ -20,6 +20,9 @@
     self = [super init];
     if (self) {
         [self setValuesForKeysWithDictionary:dict];
+        
+        self.seeCount=(arc4random() % 501) + 1000;
+        self.zanCount=(arc4random() % 501) + 500;
     }
     return self;
 }

@@ -1,14 +1,14 @@
 //
-//  FFOneImageCell.m
+//  FFHeadlineOneImageCell.m
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/23.
 //  Copyright © 2016年 bj.zly.com. All rights reserved.
 //
 
-#import "FFOneImageCell.h"
+#import "FFHeadlineOneImageCell.h"
 
-@implementation FFOneImageCell
+@implementation FFHeadlineOneImageCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

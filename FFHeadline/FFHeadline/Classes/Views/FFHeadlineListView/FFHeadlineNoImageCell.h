@@ -1,5 +1,5 @@
 //
-//  FFThreeImageCell.h
+//  FFNoImageCell.h
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/23.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FFBaseImageCell.h"
+#import "FFHeadlineBaseCell.h"
 #import "FFHeadlineModel.h"
 
-@interface FFThreeImageCell : FFBaseImageCell
+@interface FFHeadlineNoImageCell : FFHeadlineBaseCell
 
 @property(nonatomic,strong)FFHeadlineModel *model;
 
