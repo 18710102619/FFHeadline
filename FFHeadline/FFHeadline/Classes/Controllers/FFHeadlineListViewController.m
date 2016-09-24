@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    
     self.modelArray=[NSMutableArray array];
     [FFNetwork get:@"http://news.58.com/pulldownlist/api/2/6/1" params:nil success:^(id responseObject) {
         NSDictionary *dic=responseObject;
@@ -55,6 +57,7 @@
         if (cell==nil) {
             cell=[[FFNoImageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
         }
+        cell.model=model;
         return cell;
     }
     else if (model.picNum==1||model.picNum==2) {
@@ -63,6 +66,7 @@
         if (cell==nil) {
             cell=[[FFOneImageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
         }
+        cell.model=model;
         return cell;
     }
     else {
@@ -71,6 +75,7 @@
         if (cell==nil) {
             cell=[[FFThreeImageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
         }
+        cell.model=model;
         return cell;
     }
 }
@@ -79,7 +84,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 200;
 }
 
 @end

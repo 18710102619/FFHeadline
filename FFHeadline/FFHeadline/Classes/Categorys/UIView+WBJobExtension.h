@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kMainScreen_Width [[UIScreen mainScreen] bounds].size.width
+
 @interface UIView (WBJobExtension)
 
 @property (nonatomic, assign) CGFloat x;

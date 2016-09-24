@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #define kFFHeadlineCell_Height 50
-#define kMainScreen_Width [[UIScreen mainScreen] bounds].size.width
 
 @interface FFHeadlineCell : UITableViewCell
 
