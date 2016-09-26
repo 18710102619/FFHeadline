@@ -9,6 +9,8 @@
 #import "FFHeadlineBaseCell.h"
 #import "FFHeadlineHighlightView.h"
 
+#define kLineSpacing 6
+
 @implementation FFHeadlineBaseCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -18,9 +20,10 @@
         self.backgroundColor=[UIColor whiteColor];
         self.cellHeight=100;
         
-        _title=[[UILabel alloc]initWithFrame:CGRectMake(kGap, kTop, kMainScreen_Width-2*kGap, 20)];
+        _title=[[UILabel alloc]initWithFrame:CGRectMake(kFFHeadlineBaseCell_Gap, kFFHeadlineBaseCell_Top, kMainScreen_Width-2*kFFHeadlineBaseCell_Gap, 100)];
+        //_title.backgroundColor=[UIColor magentaColor];
         _title.font=[UIFont systemFontOfSize:18];
-        _title.textColor=[UIColor colorWithHex:0x999999];
+        //_title.textColor=[UIColor colorWithHex:0x999999];
         _title.numberOfLines=0;
         [self addSubview:_title];
         
@@ -28,8 +31,8 @@
         [self addSubview:_baodian];
         [_baodian mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(26, 15));
-            make.left.equalTo(@(kGap));
-            make.bottom.equalTo(@(-kBottom));
+            make.left.equalTo(@(kFFHeadlineBaseCell_Gap));
+            make.bottom.equalTo(@(-20));
         }];
         
         _highlight=[[FFHeadlineHighlightView alloc]init];
@@ -37,9 +40,8 @@
         [_highlight mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(_baodian.mas_right).with.offset(20);
             make.height.equalTo(@(15));
-            make.right.equalTo(@(-kGap));
-            make.bottom.equalTo(@(-kBottom));
-            
+            make.right.equalTo(@(-kFFHeadlineBaseCell_Gap));
+            make.bottom.equalTo(@(-20));
         }];
         
         double h=0.7;
@@ -47,8 +49,8 @@
         line.backgroundColor=[UIColor colorWithHex:0xe8e8e8];
         [self addSubview:line];
         [line mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@(kGap));
-            make.right.equalTo(@(-kGap));
+            make.left.equalTo(@(kFFHeadlineBaseCell_Gap));
+            make.right.equalTo(@(-kFFHeadlineBaseCell_Gap));
             make.bottom.equalTo(@(-h));
             make.height.equalTo(@(h));
         }];
@@ -60,16 +62,30 @@
 {
     NSMutableAttributedString *str=[[NSMutableAttributedString alloc] initWithString:title];
     NSMutableParagraphStyle *style=[[NSMutableParagraphStyle alloc] init];
+    
     [style setLineSpacing:kLineSpacing];
     [str addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, [title length])];
+
+    NSDictionary *dic=@{NSFontAttributeName:_title.font,NSParagraphStyleAttributeName:style};
+    CGSize size=[title boundingRectWithSize:CGSizeMake(_title.width, 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size;
     
-    _title.attributedText = str;
-    [_title sizeToFit];
+    _title.attributedText=str;
+    _title.height=size.height;
     
     double h=self.title.height;
     if(h<28) {
         self.title.height=h-kLineSpacing;
     }
+}
+
+- (void)setModel:(FFHeadlineModel *)model
+{
+    _model=model;
+    
+    self.highlight.model=model;
+    [self setTitleAttributedText:model.title];
+    
+    self.cellHeight=self.title.x+self.title.height+7+kFFHeadlineBaseCell_Bottom;
 }
 
 @end

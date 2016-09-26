@@ -12,11 +12,11 @@
 #import "UIColor+Hex.h"
 #import "Masonry.h"
 #import "FFHeadlineHighlightView.h"
+#import "FFHeadlineModel.h"
 
-#define kTop 30
-#define kGap 15
-#define kBottom 20
-#define kLineSpacing 6
+#define kFFHeadlineBaseCell_Top 20
+#define kFFHeadlineBaseCell_Gap 15
+#define kFFHeadlineBaseCell_Bottom 50
 
 @interface FFHeadlineBaseCell : UITableViewCell
 
@@ -25,6 +25,7 @@
 @property(nonatomic,strong)FFHeadlineHighlightView *highlight;
 
 @property(nonatomic,assign)double cellHeight;
+@property(nonatomic,strong)FFHeadlineModel *model;
 
 - (void)setTitleAttributedText:(NSString *)title;
 

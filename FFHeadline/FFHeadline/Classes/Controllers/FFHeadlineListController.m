@@ -1,20 +1,20 @@
 //
-//  FFHeadlineListViewControllerTableViewController.m
+//  FFHeadlineListController.m
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/23.
 //  Copyright © 2016年 bj.zly.com. All rights reserved.
 //
 
-#import "FFHeadlineListViewController.h"
+#import "FFHeadlineListController.h"
 #import "FFNetwork.h"
 #import "FFHeadlineModel.h"
-#import "FFHeadlineNoImageCell.h"
 #import "FFHeadlineOneImageCell.h"
 #import "FFHeadlineThreeImageCell.h"
 #import "FFHeadlineLoadMoreView.h"
+#import "FFHeadlineDetailsController.h"
 
-@interface FFHeadlineListViewController ()
+@interface FFHeadlineListController ()
 
 @property(nonatomic,strong)NSMutableArray *modelArray;
 @property(nonatomic,assign)BOOL isLoading;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation FFHeadlineListViewController
+@implementation FFHeadlineListController
 
 - (void)viewDidLoad
 {
@@ -37,7 +37,7 @@
 - (void)requestData
 {
     self.isLoading=YES;
-    NSString *url=[NSString stringWithFormat:@"http://news.58.com/pulldownlist/api/1/6/%i",self.page];
+    NSString *url=[NSString stringWithFormat:@"http://news.58.com/pulldownlist/api/1/2/%i",self.page];
     [FFNetwork get:url params:nil success:^(id responseObject) {
         self.isLoading=NO;
         NSDictionary *dic=responseObject;
@@ -69,9 +69,9 @@
     FFHeadlineModel *model=self.modelArray[indexPath.row];
     if (model.picNum==0) {
         static NSString *identifer=@"FFHeadlineNoImageCell";
-        FFHeadlineNoImageCell *cell=[tableView dequeueReusableCellWithIdentifier:identifer];
+        FFHeadlineBaseCell *cell=[tableView dequeueReusableCellWithIdentifier:identifer];
         if (cell==nil) {
-            cell=[[FFHeadlineNoImageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+            cell=[[FFHeadlineBaseCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
         }
         cell.model=model;
         return cell;
@@ -102,6 +102,13 @@
 {
     FFHeadlineBaseCell *cell=(FFHeadlineBaseCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
     return cell.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FFHeadlineModel *model=self.modelArray[indexPath.row];
+    FFHeadlineDetailsController *vc=[[FFHeadlineDetailsController alloc]initWithModel:model];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

@@ -8,7 +8,7 @@
 
 #import "FFRootViewController.h"
 #import "FFHeadlineCell.h"
-#import "FFHeadlineListViewController.h"
+#import "FFHeadlineListController.h"
 
 @interface FFRootViewController ()
 
@@ -60,7 +60,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FFHeadlineListViewController *vc=[[FFHeadlineListViewController alloc]init];
+    FFHeadlineListController *vc=[[FFHeadlineListController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -1,5 +1,5 @@
 //
-//  FFHeadlineListViewController.h
+//  FFHeadlineListController.h
 //  FFHeadline
 //
 //  Created by 张玲玉 on 16/9/23.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FFHeadlineListViewController : UITableViewController
+@interface FFHeadlineListController : UITableViewController
 
 @end

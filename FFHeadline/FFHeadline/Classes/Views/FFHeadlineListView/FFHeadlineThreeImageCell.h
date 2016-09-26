@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FFHeadlineBaseCell.h"
-#import "FFHeadlineModel.h"
+
 
 @interface FFHeadlineThreeImageCell : FFHeadlineBaseCell
 
