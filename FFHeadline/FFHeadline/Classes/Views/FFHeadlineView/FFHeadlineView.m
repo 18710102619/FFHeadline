@@ -9,8 +9,7 @@
 #import "FFHeadlineView.h"
 #import "Masonry.h"
 #import "UIView+WBJobExtension.h"
-
-#define kGap 15
+#import "UIColor+Hex.h"
 
 @implementation FFHeadlineView
 
@@ -19,22 +18,26 @@
     self = [super init];
     if (self) {
         self.title=[[UILabel alloc]init];
-        self.title.backgroundColor=[UIColor orangeColor];
+        self.title.font=[UIFont systemFontOfSize:13];
+        self.title.textColor=[UIColor colorWithHex:0x999999];
+        //self.title.backgroundColor=[UIColor orangeColor];
         [self addSubview:self.title];
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(15));
-            make.right.equalTo(@(-15));
-            make.top.equalTo(@(7));
+            make.right.equalTo(@(-12));
+            make.top.equalTo(@(14));
             make.height.equalTo(@(15));
         }];
         
         self.subtitle=[[UILabel alloc]init];
-        self.subtitle.backgroundColor=[UIColor orangeColor];
+        self.subtitle.font=[UIFont systemFontOfSize:13];
+        self.subtitle.textColor=[UIColor colorWithHex:0x999999];
+        //self.subtitle.backgroundColor=[UIColor orangeColor];
         [self addSubview:self.subtitle];
         [self.subtitle mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(15));
-            make.right.equalTo(@(-15));
-            make.bottom.equalTo(@(-7));
+            make.right.equalTo(@(-12));
+            make.bottom.equalTo(@(-14));
             make.height.equalTo(@(15));
         }];
     }

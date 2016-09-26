@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kFFHeadlineCell_Height 50
+#define kFFHeadlineCell_Height 64
 
 @interface FFHeadlineCell : UITableViewCell
 

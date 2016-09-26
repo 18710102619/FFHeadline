@@ -11,8 +11,6 @@
 #import "Masonry.h"
 #import "UIView+WBJobExtension.h"
 
-#define kGap 15
-
 @interface FFHeadlineCell ()<UIScrollViewDelegate>
 
 @property(nonatomic,strong)UIImageView *icon;
@@ -33,16 +31,16 @@
     if (self) {
         self.layer.masksToBounds=YES;
         
-        _icon=[[UIImageView alloc]init];
-        _icon.backgroundColor=[UIColor orangeColor];
+        _icon=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"headline_zhibo"]];
+        //_icon.backgroundColor=[UIColor orangeColor];
         [self addSubview:_icon];
         [_icon mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(35, 35));
-            make.left.equalTo(@(kGap));
+            make.size.mas_equalTo(CGSizeMake(66, 40));
+            make.left.equalTo(@(5));
             make.centerY.equalTo(self);
         }];
         
-        double x=kGap+35;
+        double x=_icon.x+_icon.width+5;
         _curView=[[FFHeadlineView alloc]init];
         _curView.frame=CGRectMake(x, 0, kMainScreen_Width-x, kFFHeadlineCell_Height);
         [self addSubview:_curView];
