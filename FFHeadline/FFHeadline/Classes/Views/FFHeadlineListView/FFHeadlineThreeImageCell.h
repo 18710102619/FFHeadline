@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "FFHeadlineBaseCell.h"
 
-
 @interface FFHeadlineThreeImageCell : FFHeadlineBaseCell
-
-@property(nonatomic,strong)FFHeadlineModel *model;
 
 @end

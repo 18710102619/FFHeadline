@@ -18,12 +18,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor=[UIColor whiteColor];
-        self.cellHeight=100;
         
         _title=[[UILabel alloc]initWithFrame:CGRectMake(kFFHeadlineBaseCell_Gap, kFFHeadlineBaseCell_Top, kMainScreen_Width-2*kFFHeadlineBaseCell_Gap, 100)];
-        //_title.backgroundColor=[UIColor magentaColor];
         _title.font=[UIFont systemFontOfSize:18];
-        //_title.textColor=[UIColor colorWithHex:0x999999];
         _title.numberOfLines=0;
         [self addSubview:_title];
         
