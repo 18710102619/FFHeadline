@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kFFHeadlineView_Height 64
+
 @interface FFHeadlineView : UIView
 
 @property(nonatomic,strong)UILabel *title;

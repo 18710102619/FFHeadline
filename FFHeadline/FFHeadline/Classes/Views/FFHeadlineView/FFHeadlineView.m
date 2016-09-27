@@ -17,6 +17,8 @@
 {
     self = [super init];
     if (self) {
+        self.backgroundColor=[UIColor yellowColor];
+        
         self.title=[[UILabel alloc]init];
         self.title.font=[UIFont systemFontOfSize:13];
         self.title.textColor=[UIColor colorWithHex:0x999999];
@@ -42,6 +44,19 @@
         }];
     }
     return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+
+    CGContextRef point = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(point, rect);
+    
+    CGContextAddEllipseInRect(point, CGRectMake(0, 20, 6, 6));
+    CGContextAddEllipseInRect(point, CGRectMake(0, kFFHeadlineView_Height-25, 6, 6));
+    [[UIColor orangeColor] set];
+    CGContextFillPath(point);
 }
 
 @end

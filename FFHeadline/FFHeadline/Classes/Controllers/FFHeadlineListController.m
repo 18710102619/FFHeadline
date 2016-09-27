@@ -11,6 +11,8 @@
 #import "FFHeadlineModel.h"
 #import "FFHeadlineOneImageCell.h"
 #import "FFHeadlineThreeImageCell.h"
+#import "FFHeadlineLoadBarView.h"
+#import "FFHeadlineLoadNewView.h"
 #import "FFHeadlineLoadMoreView.h"
 #import "FFHeadlineDetailsController.h"
 
@@ -116,9 +118,25 @@
     CGPoint offset = scrollView.contentOffset;
     CGSize size = scrollView.contentSize;
     double value=size.height-offset.y;
-    if (!self.isLoading && value < kMainScreen_Height-20) {
+    if (offset.y<-100) {
+        if (self.tableView.tableHeaderView==nil) {
+            self.tableView.tableHeaderView=[[FFHeadlineLoadNewView alloc]init];
+        }
+    }
+    else if (!self.isLoading && value < kMainScreen_Height-20) {
         self.page++;
         [self requestData];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (self.tableView.tableHeaderView!=nil) {
+        self.tableView.tableHeaderView=nil;
+        self.tableView.tableHeaderView=[[FFHeadlineLoadBarView alloc]init];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.tableView.tableHeaderView=nil;
+        });
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362FDA701D9A7E4C00225762 /* FFHeadlineLoadNewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362FDA6F1D9A7E4C00225762 /* FFHeadlineLoadNewView.m */; };
+		362FDA721D9A830800225762 /* headline_dropload.gif in Resources */ = {isa = PBXBuildFile; fileRef = 362FDA711D9A830800225762 /* headline_dropload.gif */; };
+		362FDA741D9A838C00225762 /* headline_dropload1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 362FDA731D9A838C00225762 /* headline_dropload1.gif */; };
+		362FDA7A1D9A928C00225762 /* FFHeadlineLoadBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362FDA791D9A928C00225762 /* FFHeadlineLoadBarView.m */; };
 		364D59CE1D964FA20070E3C0 /* FFHeadlineHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D59CD1D964FA20070E3C0 /* FFHeadlineHighlightView.m */; };
 		364D59D11D965E5C0070E3C0 /* FFHeadlineLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D59D01D965E5C0070E3C0 /* FFHeadlineLoadMoreView.m */; };
 		364D59D41D967BDE0070E3C0 /* FFHeadlineDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D59D31D967BDE0070E3C0 /* FFHeadlineDetailsController.m */; };
@@ -48,6 +52,12 @@
 
 /* Begin PBXFileReference section */
 		1B06FC2035708F1F4A24BDE8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		362FDA6E1D9A7E4C00225762 /* FFHeadlineLoadNewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineLoadNewView.h; sourceTree = "<group>"; };
+		362FDA6F1D9A7E4C00225762 /* FFHeadlineLoadNewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeadlineLoadNewView.m; sourceTree = "<group>"; };
+		362FDA711D9A830800225762 /* headline_dropload.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = headline_dropload.gif; sourceTree = "<group>"; };
+		362FDA731D9A838C00225762 /* headline_dropload1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = headline_dropload1.gif; sourceTree = "<group>"; };
+		362FDA781D9A928C00225762 /* FFHeadlineLoadBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineLoadBarView.h; sourceTree = "<group>"; };
+		362FDA791D9A928C00225762 /* FFHeadlineLoadBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeadlineLoadBarView.m; sourceTree = "<group>"; };
 		364D59CC1D964FA20070E3C0 /* FFHeadlineHighlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineHighlightView.h; sourceTree = "<group>"; };
 		364D59CD1D964FA20070E3C0 /* FFHeadlineHighlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeadlineHighlightView.m; sourceTree = "<group>"; };
 		364D59CF1D965E5C0070E3C0 /* FFHeadlineLoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeadlineLoadMoreView.h; sourceTree = "<group>"; };
@@ -254,6 +264,8 @@
 		36F341FB1D96205200D84022 /* FFHeadlineListView */ = {
 			isa = PBXGroup;
 			children = (
+				362FDA711D9A830800225762 /* headline_dropload.gif */,
+				362FDA731D9A838C00225762 /* headline_dropload1.gif */,
 				36F341FC1D96205200D84022 /* FFHeadlineBaseCell.h */,
 				36F341FD1D96205200D84022 /* FFHeadlineBaseCell.m */,
 				36F342001D96205200D84022 /* FFHeadlineOneImageCell.h */,
@@ -262,6 +274,10 @@
 				36F342031D96205200D84022 /* FFHeadlineThreeImageCell.m */,
 				364D59CC1D964FA20070E3C0 /* FFHeadlineHighlightView.h */,
 				364D59CD1D964FA20070E3C0 /* FFHeadlineHighlightView.m */,
+				362FDA781D9A928C00225762 /* FFHeadlineLoadBarView.h */,
+				362FDA791D9A928C00225762 /* FFHeadlineLoadBarView.m */,
+				362FDA6E1D9A7E4C00225762 /* FFHeadlineLoadNewView.h */,
+				362FDA6F1D9A7E4C00225762 /* FFHeadlineLoadNewView.m */,
 				364D59CF1D965E5C0070E3C0 /* FFHeadlineLoadMoreView.h */,
 				364D59D01D965E5C0070E3C0 /* FFHeadlineLoadMoreView.m */,
 			);
@@ -395,7 +411,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362FDA741D9A838C00225762 /* headline_dropload1.gif in Resources */,
 				36B82BAE1D8FE027002EBB72 /* Assets.xcassets in Resources */,
+				362FDA721D9A830800225762 /* headline_dropload.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +485,10 @@
 				36F3420D1D96205200D84022 /* FFHeadlineModel.m in Sources */,
 				36F3420C1D96205200D84022 /* FFRootViewController.m in Sources */,
 				36F3420A1D96205200D84022 /* UIView+WBJobExtension.m in Sources */,
+				362FDA7A1D9A928C00225762 /* FFHeadlineLoadBarView.m in Sources */,
 				36F3420B1D96205200D84022 /* FFHeadlineListController.m in Sources */,
 				367FCBA81D951AAF00D4411D /* FFNetwork.m in Sources */,
+				362FDA701D9A7E4C00225762 /* FFHeadlineLoadNewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
