@@ -1,7 +1,11 @@
 platform :ios, '8.0'
 
-pod 'JSPatch'
-pod 'Masonry'
+target 'FFHeadline' do
 
-pod 'AFNetworking', '~>2.0'
-pod 'SDWebImage', '~>3.8'
+   pod 'JSPatch'
+   pod 'Masonry'
+
+   pod 'AFNetworking', '~>2.0'
+   pod 'SDWebImage', '~>3.8'
+
+end
